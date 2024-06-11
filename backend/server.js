@@ -9,7 +9,11 @@ app.use(cors());
 app.get("/api/data", (req, res) => {
   const data = { message: "Hello from the backend" };
   res.json(data);
-  console.log(data);
+});
+
+app.get("/api/message", (req, res) => {
+  const data = { message: "A day without laughter is a day wasted." };
+  res.json(data);
 });
 
 app.listen(port, () => {
